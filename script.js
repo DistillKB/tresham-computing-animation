@@ -75,7 +75,7 @@ function fadeInLogo(callback) {
 
 function glitchLogo() {
     const glitchChars = '!@#$%^&*()_+=-`~[]\{}|;\':",./<>?';
-    let glitchInterval; // Declare outside to manage it
+    let glitchInterval; 
 
     function startGlitching() {
         glitchInterval = setInterval(() => {
@@ -119,27 +119,25 @@ function glitchLogo() {
             }
         }, 50);
 
-        // Stop glitching after about 1 second (20 * 50ms = 1000ms)
         setTimeout(stopGlitching, 1000);
     }
 
     function stopGlitching() {
         clearInterval(glitchInterval);
-        logo.style.filter = 'none'; // Reset filter
-        logo.style.transform = 'none'; // Reset transform
-        logo.classList.remove('glitching'); // Remove glitch class
+        logo.style.filter = 'none'; 
+        logo.style.transform = 'none'; 
+        logo.classList.remove('glitching'); 
 
-        // Pause for a random amount of time (between 0.5 and 2.5 seconds)
+        // Pause for a random amount of time
         const pauseDuration = Math.random() * 5000 + 500;
         setTimeout(startGlitching, pauseDuration);
     }
 
-    // Start the initial glitching
     startGlitching();
 }
 
 function typeText(element, text, callback) {
-  element.style.opacity = 1; // Make it visible
+  element.style.opacity = 1; 
   let i = 0;
   const typingInterval = setInterval(() => {
     element.textContent = text.substring(0, i + 1) + (underscoreVisible ? "_" : "");
@@ -161,7 +159,7 @@ function backspaceText(element, callback) {
     if (i <= 0) {
       clearInterval(backspaceInterval);
       element.style.opacity = 0;
-      setTimeout(callback, 200); // Short pause
+      setTimeout(callback, 200); 
     }
   }, 40); // Faster backspacing
 }
@@ -183,12 +181,11 @@ function glitchText(element, callback) {
             }
         }
 
-        // Apply glitch effects
         element.textContent = glitchedText;
         element.style.color = (Math.random() < 0.5) ? '#f00' : '#0f0'; // Flash colors
         element.style.transform = `translate(${Math.random() * 4 - 2}px, ${Math.random() * 4 - 2}px)`; // Offset
 
-        // Duplication/Flicker (optional, can be performance intensive)
+        // Duplication/Flicker 
         if (Math.random() < 0.3) {
              const clone = element.cloneNode(true);
              clone.style.position = 'absolute';
@@ -198,7 +195,7 @@ function glitchText(element, callback) {
              clone.style.color = (Math.random() < 0.5) ? '#935FB2' : originalColor;
              element.parentNode.appendChild(clone);
              setTimeout(() => {
-                 if (element.parentNode) { //check if parent exists
+                 if (element.parentNode) { 
                     element.parentNode.removeChild(clone);
                  }
              }, 50); // Remove the clone quickly
@@ -208,10 +205,10 @@ function glitchText(element, callback) {
         glitchCount++;
         if (glitchCount >= maxGlitches) {
             clearInterval(glitchInterval);
-            element.textContent = originalText; // Restore original text
-            element.style.color = originalColor; // Restore original color
-            element.style.transform = 'none';    // Reset transform
-            setTimeout(callback, 300); // Short pause after glitching
+            element.textContent = originalText; 
+            element.style.color = originalColor; 
+            element.style.transform = 'none';    
+            setTimeout(callback, 300); 
         }
     }, 75); // Glitch length
 }
@@ -306,7 +303,6 @@ function animate() {
 
 animate();
 
-// Handle window resize
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
