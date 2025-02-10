@@ -1,14 +1,14 @@
 body {
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #000; /* Black background */
-  color: #33BA47; /* Green text */
-  font-family: 'Courier New', Courier, monospace; /* Monospace font */
-  overflow: hidden; /* Hide scrollbars */
+  background-color: #000; 
+  color: #33BA47; 
+  font-family: 'Courier New', Courier, monospace; 
+  overflow: hidden; 
 }
 
 #matrix-canvas {
@@ -17,15 +17,15 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Behind the text */
+  z-index: -1; 
 }
 
 .logo-container {
     position: relative;
     z-index: 1;
-    margin-bottom: 2rem; /* Space between logo and text */
-    width: 200px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 2rem; 
+    width: 200px; 
+    height: auto; 
     display: flex;
     justify-content: center;
 }
@@ -33,44 +33,41 @@ body {
 #tresham-logo {
     width: 200%;
     height: 100%;
-    opacity: 0; /* Start hidden */
-    filter: brightness(1.0); /* Initial brightness */
+    opacity: 0; 
+    filter: brightness(1.0); 
     transition: filter 0.3s ease, opacity 0.5s ease;
 }
 
-/* Add this to your CSS to handle the glitch character */
 #tresham-logo.glitching::before {
   content: var(--glitch-char);
   position: absolute;
   top: 0;
   left: 0;
-  color: #20d632; /* glitch color */
+  color: #20d632; 
   opacity: 0.8;
-  font-size: 20px; /* Adjust size as needed */
-  transform: translate(-50%, -50%); /* Center it */
-  pointer-events: none; /* Make it non-interactive */
+  font-size: 20px; 
+  transform: translate(-50%, -50%); 
+  pointer-events: none; 
 }
 
 
 .text-container {
   position: relative;
-  z-index: 1; /* Above the canvas */
-  display: flex;
+  z-index: 1; 
   flex-direction: column;
   align-items: center;
-  text-align: center; /* Center-align the text within each span */
+  text-align: center; 
 }
 
 .text {
   font-size: 2.5rem;
   font-weight: bold;
-  opacity: 0; /* Start hidden */
-  white-space: pre-wrap; /* Preserve spaces and newlines, wrap long lines */
-  margin-bottom: 0.5rem; /* Consistent spacing */
-  transition: opacity 0.5s ease; /* Smooth fade-in */
+  opacity: 0; 
+  white-space: pre-wrap;
+  margin-bottom: 0.5rem; 
+  transition: opacity 0.5s ease; 
 }
 
-/* Adjust font sizes and spacing as needed */
 #text2, #text4 {
   font-size: 1.8rem;
   margin-top: 0.6rem;
@@ -87,5 +84,4 @@ body {
 #text7 {
     font-size: 3rem;
     margin-top: 1rem;
-    color: #935FB2; /* Use a different color for the name */
-}
+    color: #935FB2; 
