@@ -280,11 +280,11 @@ function animate() {
         case 20: 
             typeText(textElements[6], phrases[6], () => { animationStep++; animate(); });
             break;
-		case 21:
-			glitchText(textElements[6], () => { animationStep++; animate(); });
+	case 21:
+	    glitchText(textElements[6], () => { animationStep++; animate(); });
             break;
-		case 22:
-			backspaceText(textElements[6], () => { animationStep++; animate(); });
+	case 22:
+	    backspaceText(textElements[6], () => { animationStep++; animate(); });
             break;
         case 23: 
             glitchText(textElements[6], () => {
