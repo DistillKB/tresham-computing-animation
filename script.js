@@ -46,9 +46,9 @@ const textElements = [
 
 const phrases = [
   "Welcome to the Tresham College\nComputing Department",
-  "Where innovation meets opportunity!",
-  "From foundational courses to specialized programs... \n ...in App Development and Cyber Security...",
-  "...we offer pathways for every aspiring tech professional.",
+  "\nWhere innovation meets opportunity!",
+  "From foundational courses to specialized programs... \n\n ...in App Development and Cyber Security...",
+  "\n...we offer pathways for every aspiring tech professional.",
   "Our cutting-edge facilities ensure you gain\npractical experience with the latest technology.",
   "Your future starts here. \n Apply now!",
   "Bohdan Silakov"
@@ -275,7 +275,7 @@ function animate() {
             glitchText(textElements[5], () => { animationStep++; animate(); });
             break;
         case 19: 
-			backspaceText(textElements[5], () => { animationStep++; animate(); });
+	    backspaceText(textElements[5], () => { animationStep++; animate(); });
             break;
         case 20: 
             typeText(textElements[6], phrases[6], () => { animationStep++; animate(); });
