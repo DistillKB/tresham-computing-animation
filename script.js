@@ -46,11 +46,11 @@ const textElements = [
 
 const phrases = [
   "Welcome to the Tresham College\nComputing Department",
-  "\nWhere innovation meets opportunity!",
-  "From foundational courses to specialized programs... \n...in App Development and Cyber Security...",
-  "\n...we offer pathways for every aspiring tech professional.",
+  "Where innovation meets opportunity!",
+  "From foundational courses to specialized programs...\n...in App Development and Cyber Security...",
+  "...we offer pathways for every aspiring tech professional.",
   "Our cutting-edge facilities ensure you gain\npractical experience with the latest technology.",
-  "Your future starts here. \n Apply now!",
+  "Your future starts here.\nApply now!",
   "Bohdan Silakov"
 ];
 
